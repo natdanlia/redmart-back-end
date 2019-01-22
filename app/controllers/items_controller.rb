@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  skip_before_action :authorized, only: [:index]
   before_action :set_item, only: [:show, :update, :destroy]
 
   # GET /items

@@ -1,4 +1,6 @@
-class UsersController < ApplicationController
+require "byebug"
+class Api::V1::UsersController < ApplicationController
+  skip_before_action :authorized, only: [:create]
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
@@ -13,14 +15,19 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def profile
+    # byebug
+    render json: { user: UserSerializer.new(current_user) }, status: :accepted
+  end
   # POST /users
   def create
-    @user = User.new(user_params)
-
-    if @user.save
-      render json: @user, status: :created, location: @user
+    @user = User.create(user_params)
+    if @user.valid?
+      Cart.create(user_id: @user.id)
+      @token = encode_token(user_id: @user.id)
+      render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: { error: 'failed to create user' }, status: :not_acceptable
     end
   end
 

@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  # skip_before_action :authorized, only: [:index]
+
   before_action :set_cart, only: [:show, :update, :destroy]
 
   # GET /carts
