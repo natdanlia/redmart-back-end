@@ -10,6 +10,16 @@ class CartsController < ApplicationController
     render json: @carts
   end
 
+  def checkout
+    @cart = Cart.find(params[:cart_id])
+    @cart.cart_items.destroy_all
+    if @cart.cart_items.empty?
+      render json: {error: false }, status: :created
+    else
+      render json: {error: true }, status: :unprocessable_entity
+    end
+  end
+
   # GET /carts/1
   def show
     render json: @cart
