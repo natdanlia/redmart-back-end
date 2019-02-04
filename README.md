@@ -1,24 +1,15 @@
-# README
+# READMe
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend of RedMart Application where one can buy and sell any items online.
 
-Things you may want to cover:
 
-* Ruby version
+A RESTful Rails API backend with endpoints for users, items, cart and item_cart using PostgreSQL database.
 
-* System dependencies
 
-* Configuration
+Token-based auth system using bCrypt and has secured password Macro.
 
-* Database creation
 
-* Database initialization
+A scalable and user-friendly API adhering MVC pattern.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
