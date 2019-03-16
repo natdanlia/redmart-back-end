@@ -19,5 +19,3 @@ In-ear · Portable Devices · Wireless · Bluetooth · Headphones", picture: "ht
 Item.create(title: 'V-Moda Crossfade LP Xflpr-phchrome 3.5mm Connector Circumaural Headphone', price: 199, description: "Acoustics co-developed by world-renowned artists, DJs, and producers delivers an extended range sound stage composed of deep vibrant bass, organic mid-range, and high clarity", picture: "https://c1.neweggimages.com/ProductImage/26-626-011-02.jpg", category: "electronics", amount: 100 )
 
 Item.create(title: 'The Hobbit 2', price: 3699, description: "The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.", picture: "https://cdn-blogs.tribune.com.pk/2014/01/20424-cover-1388820225-410-640x480.jpg", category: "movies and books", amount: 50 )
-
-cartItem1 = CartItem.create(item: bike, cart: cart, amount: 2)
