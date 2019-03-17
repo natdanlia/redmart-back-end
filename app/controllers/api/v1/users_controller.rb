@@ -51,7 +51,7 @@ class Api::V1::UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Only allow trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :zipcode, :img)
     end
