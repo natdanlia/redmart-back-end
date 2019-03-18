@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-natos = User.create(name: 'Nathan Daniel', email: "nathandaniel2222@gmail.com", password: "pw", zipcode: 22314, img: "https://cars.usnews.com/static/images/Auto/izmo/i106121436/2019_dodge_challenger_angularfront.jpg")
+natos = User.create(name: 'Nathan Daniel', email: "nathandaniel2222@gmail.com", password: "password", zipcode: 22314, img: "https://cars.usnews.com/static/images/Auto/izmo/i106121436/2019_dodge_challenger_angularfront.jpg")
 
 cart = Cart.create(user: natos)
 
